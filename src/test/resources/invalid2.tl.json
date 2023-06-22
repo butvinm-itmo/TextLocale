@@ -1,0 +1,7 @@
+{
+    "name": {
+        "message": "Hello, world!",
+        "description": "The main message to display",
+        "length": 10
+    }
+}
