@@ -5,7 +5,7 @@
 
     <groupId>com.butvinm</groupId>
     <artifactId>textlocale</artifactId>
-    <version>4.0.2</version>
+    <version>5.0.1</version>
 
     <name>TextLocale</name>
     <description>Localized texts manager</description>
