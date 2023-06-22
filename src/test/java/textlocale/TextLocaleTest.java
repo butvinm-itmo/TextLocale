@@ -28,13 +28,13 @@ public class TextLocaleTest {
     @Test
     public void testLoadPackage() throws IOException {
         locale = "en";
-        String text = rootPackage.getText("subdir.subdir2.text4.greet");
+        String text = rootPackage.getString("subdir.subdir2.text4.greet");
         assertEquals("Hello, world!", text.toString());
         locale = "es";
-        text = rootPackage.getText("subdir.subdir2.text4.greet");
+        text = rootPackage.getString("subdir.subdir2.text4.greet");
         assertEquals("?Hola, mundo!", text.toString());
 
-        text = rootPackage.getText("text1.Hi");
+        text = rootPackage.getString("text1.Hi");
         assertEquals("?Hola, mundo!", text.toString());
     }
 
@@ -43,18 +43,18 @@ public class TextLocaleTest {
         locale = "en";
         TextPackage subPackage = rootPackage.getPackage("subdir.subdir2");
 
-        String text = subPackage.getText("text4.greet");
+        String text = subPackage.getString("text4.greet");
         assertEquals("Hello, world!", text.toString());
 
-        text = subPackage.getText("text4.greet");
+        text = subPackage.getString("text4.greet");
         assertEquals("Hello, world!", text.toString());
 
-        text = subPackage.getText("text4.greet");
+        text = subPackage.getString("text4.greet");
         assertEquals("Hello, world!", text.toString());
 
         locale = "es";
 
-        text = subPackage.getText("text4.greet");
+        text = subPackage.getString("text4.greet");
         assertEquals("?Hola, mundo!", text.toString());
     }
 }

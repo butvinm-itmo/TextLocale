@@ -21,30 +21,47 @@ public interface TextSupplier {
      * @param key key of text
      * @return text
      */
-    String getText(String key);
+    Text getText(String key);
 
     /**
-     * Returns text by key with formatting.
+     * Returns string by key.
+     *
+     * @param key  key of text
+     * @return string
+     */
+    default String getString(String key) {
+        return getText(key).toString();
+    }
+
+    /**
+     * Returns string by key with formatting.
      *
      * @param key  key of text
      * @param args arguments for formatting
-     * @return text
+     * @return string
      */
-    default String getText(String key, Object... args) {
-        return String.format(getText(key), args);
+    default String getString(String key, Object... args) {
+        return String.format(getString(key), args);
     }
 
     /**
      * Alias for {@link #getText(String)}.
      */
-    default String t(String key) {
+    default Text t(String key) {
         return getText(key);
     }
 
     /**
      * Alias for {@link #getText(String, Object...)}.
      */
-    default String t(String key, Object... args) {
-        return getText(key, args);
+    default String s(String key) {
+        return getString(key);
+    }
+
+    /**
+     * Alias for {@link #getText(String, Object...)}.
+     */
+    default String s(String key, Object... args) {
+        return getString(key, args);
     }
 }

@@ -11,7 +11,7 @@ import textlocale.TextLocale;
  * @see TextLocale
  */
 @Data
-public class TextPackage {
+public class TextPackage implements TextSupplier {
     /**
      * Node with package texts.
      */
@@ -33,9 +33,21 @@ public class TextPackage {
      * @param key Text key.
      * @return Text value.
      */
-    public String getText(String key) {
+    public Text getText(String key) {
         List<String> keys = List.of(key.split("\\."));
-        return this.textNode.getValueByPath(keys).toString();
+        return this.textNode.getValueByPath(keys);
+    }
+
+    /**
+     * Get string by key.
+     *
+     * @param key Text key.
+     * @return Text value.
+     *
+     * @see #getText(String)
+     */
+    public String getString(String key) {
+        return getText(key).toString();
     }
 
     /**
