@@ -1,4 +1,4 @@
-package textlocale.utils;
+package textlocale.node;
 
 import java.util.ArrayList;
 import java.util.List;

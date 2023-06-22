@@ -2,7 +2,7 @@ package textlocale.text;
 
 import java.util.Map;
 
-import textlocale.utils.Node;
+import textlocale.node.Node;
 
 /**
  * TextNode represents tree structure of texts in packages.

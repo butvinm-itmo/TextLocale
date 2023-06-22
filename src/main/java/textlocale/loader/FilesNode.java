@@ -2,7 +2,7 @@ package textlocale.loader;
 
 import java.util.Map;
 
-import textlocale.utils.Node;
+import textlocale.node.Node;
 
 /**
  * FilesNode represents tree structure of packages.
