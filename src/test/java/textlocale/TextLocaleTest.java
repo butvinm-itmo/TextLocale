@@ -1,12 +1,12 @@
 package textlocale;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.File;
 import java.io.IOException;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import textlocale.loader.FilesLoader;
 import textlocale.loader.common.LocalLoader;
@@ -17,7 +17,7 @@ public class TextLocaleTest {
 
     static TextPackage rootPackage;
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         String resourcesPath = classLoader.getResource(".").getPath();
